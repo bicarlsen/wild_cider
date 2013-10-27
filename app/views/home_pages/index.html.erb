@@ -1,31 +1,33 @@
 <div class='top-container'>
 	<div class='updates-module'>
+		<h1>Happenings</h1>
 		<div class='update-image'>
-			<%= image_tag "test/temp_image.png" %>
+			<% image_file = @updates.first.image_file if @updates.first%>
+			<% image_file ||= 'test/temp_image_medium.png' %>
+			<%= image_tag image_file, alt: @updates.first.title %>
 		</div>
-
 		<div class='update-container'>
 			<ul class='updates-list'>
-				<li class='update first-update'></li>
-				<li class='update second-update'></li>
-				<li class='update third-update'></li>
+				<%= render partial: 'update_summary', collection: @updates %>
 			</ul>
 		</div>
 	</div>
 
 	<div class='ad-module'>
+		Ads
 		<div class='ad'>
-			<%= image_tag "test/temp_image.png"%>
+			<%= image_tag "test/temp_image_medium.png"%>
 		</div>
 
 		<div class='ad'>
-			<%= image_tag "test/temp_img.png"%>
+			<%= image_tag "test/temp_image_medium.png"%>
 		</div>
 	</div>
 </div>
 
 <div class='bottom-container'>
 	<div class='cider-blurb'>
+		Here's some interesting stuff about cider
 	</div>
 </div>
 

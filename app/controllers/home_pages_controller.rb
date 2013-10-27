@@ -1,5 +1,7 @@
 class HomePagesController < ApplicationController
 	def index
+		@updates = Update.where('post_at <= ?', Time.now.utc).
+			order('post_at DESC').limit(3)
 	end
 
 	def cider

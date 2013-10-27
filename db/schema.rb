@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131027003514) do
+ActiveRecord::Schema.define(version: 20131027041201) do
 
   create_table "ciders", force: true do |t|
     t.string   "name"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20131027003514) do
     t.string   "position"
     t.text     "biography"
     t.string   "image_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "updates", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_file"
+    t.datetime "post_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
