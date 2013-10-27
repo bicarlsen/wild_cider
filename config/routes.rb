@@ -1,4 +1,8 @@
 WildCider::Application.routes.draw do
+	resources :updates
+	resources :people
+	resources :users
+	
 	root 	'home_pages#index'
 	match '/cider', to: 'home_pages#cider', via: 'get'
 	match '/about_us', to: 'home_pages#about_us', via: 'get'

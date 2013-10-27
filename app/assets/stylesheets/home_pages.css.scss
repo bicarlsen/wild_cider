@@ -1,3 +1,48 @@
 // Place all the styles related to the HomePages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'site_variables';
+
+// General template styles 
+.top-container .bottom-container {
+	margin: 7px 5px 5px 0px;
+}
+
+// Home page
+
+.updates-module {
+	display: inline-block;
+	width: 60%;
+
+	margin-right: 20px;
+}
+
+.ad-module {
+	display: inline-block;
+	width: 35%;
+}
+
+.cider-blurb {
+
+}
+
+// Cider page
+.cider-history-module {
+
+}
+
+.cider-module {
+
+}
+
+
+
+
+
+
+
+
+
+
+

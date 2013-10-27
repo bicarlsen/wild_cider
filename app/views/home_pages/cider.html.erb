@@ -7,22 +7,12 @@
 
 <div class='bottom-content'>
 	<h1>Our Ciders</h1>
-	<div class='cider-navigation'>
-		<ul class='navigation'>
-			<li class='navigation-link stub-link'>
-				<%= link_to 'Summer', '#summer-ciders' %>
-			</li>
-			<li class='navigation-link stub-link'>
-				<%= link_to 'Fall', '#fall-ciders' %>
-			</li>
-			<li class='navigation-link stub-link'>
-				<%= link_to 'Winter', '#winter-ciders' %>
-			</li>
-			<li class='navigation-link stub-link'>
-				<%= link_to 'Spring', '#spring-ciders' %>
-			</li>
-		</ul>
-	</div>
+	<nav class='cider-navigation'>
+		<%= link_to 'Summer', '#summer-ciders', class: 'stub-link' %> 
+		<%= link_to 'Fall', '#fall-ciders', class: 'stub-link' %>
+		<%= link_to 'Winter', '#winter-ciders', class: 'stub-link'%>
+		<%= link_to 'Spring', '#spring-ciders', class: 'stub-link' %>
+	</nav>
 	
 	<div class='cider-module'>
 		<div class='year-round-cider-container'>
