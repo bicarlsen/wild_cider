@@ -1,0 +1,16 @@
+<div class='top-content'>
+	<div class='cidery-module'>
+		<div class='cidery-image-container'>
+			<%= image_tag 'test/temp_image_large.png', alt: 'wild Cider Cidery' %>
+		</div>
+		<div class='cidery-content text-content'>
+		</div>
+	</div>
+
+	<div class='people-module'>
+		<h1>Our People</h1>
+		<%= render partial: 'person', collection: @people %>
+	</div>
+</div>
+
+

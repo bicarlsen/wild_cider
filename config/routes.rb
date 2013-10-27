@@ -1,5 +1,11 @@
 WildCider::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+	root 	'home_pages#index'
+	match '/cider', to: 'home_pages#cider', via: 'get'
+	match '/about_us', to: 'home_pages#about_us', via: 'get'
+ 	match '/contact_us', to: 'home_pages#contact_us', via: 'get'
+
+
+	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
