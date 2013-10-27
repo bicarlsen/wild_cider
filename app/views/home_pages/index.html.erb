@@ -6,7 +6,7 @@
 			<% image_alt_text = @updates.first.title if @updates.first %>
 			<% image_file ||= 'test/temp_image_medium.png' %>
 			<% image_alt_text ||= 'Updates' %>
-			<%= image_tag image_file, alt: @updates.first.title %>
+			<%= image_tag image_file, alt: image_alt_text %>
 		</div>
 		<div class='update-container'>
 			<ul class='updates-list'>
