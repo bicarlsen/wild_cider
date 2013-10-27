@@ -2,11 +2,13 @@
 	<div class='updates-module'>
 		<h1>Happenings</h1>
 		<div class='update-image'>
-			<% image_file = @updates.first.image_file if @updates.first %>
-			<% image_alt_text = @updates.first.title if @updates.first %>
-			<% image_file ||= 'test/temp_image_medium.png' %>
-			<% image_alt_text ||= 'Updates' %>
-			<%= image_tag image_file, alt: image_alt_text %>
+			<% if @updates.first %>
+				<%= image_tag @updates.first.image_file, alt: @updates.first.title %>
+			<% else %>
+				<h3 class='alert'>
+					No Recent Updates
+				</h3>
+			<% end %>
 		</div>
 		<div class='update-container'>
 			<ul class='updates-list'>
