@@ -4,37 +4,172 @@
 
 @import 'site_variables';
 
-// General template styles 
-.top-container .bottom-container {
-	margin: 7px 5px 5px 0px;
+//--- Variables ---
+
+
+
+//--- General template styles --- 
+.main-content {
+	margin-left: 3em;
 }
 
-// Home page
+.top-container, .bottom-container {
+	margin: 7px 0px 5px 0px;
+}
+
+h1 {
+	width: 75%;
+	text-align: center;
+}
+
+//--- Home page ---
 
 .updates-module {
 	display: inline-block;
 	width: 60%;
+	max-width: 800px; 
 
 	margin-right: 20px;
+
+	.update-image {
+		margin-left: 3em;
+		//text-align: center;
+	}
+
+	.updates-list {
+		padding-left: 1em;
+	}
 }
 
 .ad-module {
 	display: inline-block;
 	width: 35%;
+	vertical-align: top;
+
+	margin-top: 5em;
+	margin-left: 10px;
+
+	.ad {
+		margin: 1em;
+	}
 }
 
 .cider-blurb {
-
+	//margin-left: 15px;
 }
 
-// Cider page
+//--- Cider page ---
 .cider-history-module {
-
+	
 }
 
 .cider-module {
+	
+	.cider-navigation {
+		.anchor-link { 
+			// TODO: figure out how to make all links same width
+			background-size: 1.2em 1.2em;
+			background-repeat: no-repeat;
 
+			padding-left: 1.4em;
+			margin-right: 2em;
+		}
+
+		#to-summer-ciders {
+			background-image: url('test/temp_image_thumbnail.png');
+		}
+
+		#to-fall-ciders {
+			background-image: url('test/temp_image_thumbnail.png');
+		}
+	
+		#to-winter-ciders {
+			background-image: url('test/temp_image_thumbnail.png');
+		}
+
+		#to-spring-ciders {
+			background-image: url('test/temp_image_thumbnail.png');
+		}
+	} // end cider-navigation
+
+	.seasonal-cider-container {
+		clear: both;
+	}
+
+
+	// cider-bucket -- Remove once Cider controller is genreated and
+	//									migrate CSS to the file for ciders
+	.cider-bucket {
+
+		.cider-label {
+			float: left;
+			
+			margin: 0em 1em 1.3em 1em;
+		}
+
+		.cider-content {
+			.cider-name {
+				font-weight: 600;
+				padding-left: 2em;
+			}
+
+			.cider-description {
+				
+			}
+		} // end cider-content
+	} // end cider-bucket
+
+} // end cider-module
+
+
+//--- About Us page ---
+
+.cidery-module {
+	margin-top: 2em;
 }
+
+
+// Move person-bucket CSS to specific file when created
+.person-bucket {
+	.person-image {
+		float: left;
+		margin-right: 1em;
+	} // end person-image
+
+	.person-container {
+		.person-title {
+			.person-name {
+				font-size: 1.1em;
+				font-weight: 600;
+			}
+
+			.person-position {
+				font-size: 0.9em;
+			}
+		} // end person-title
+
+		.person-bio {
+			margin-top: .5em;
+		}
+		
+	} // end person-container
+} // end person-bucket
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
