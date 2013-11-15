@@ -2,12 +2,15 @@ WildCider::Application.routes.draw do
 	resources :updates
 	resources :people
 	resources :users
+	resources :sessions, only: [:new, :create, :destroy]
 	
 	root 	'home_pages#index'
-	match '/cider', to: 'home_pages#cider', via: 'get'
-	match '/about_us', to: 'home_pages#about_us', via: 'get'
- 	match '/contact_us', to: 'home_pages#contact_us', via: 'get'
-
+	match '/cider', 					to: 'home_pages#cider',						via: 'get'
+	match '/about_us', 				to: 'home_pages#about_us',				via: 'get'
+ 	match '/contact_us', 			to: 'home_pages#contact_us',			via: 'get'
+	match '/signin', 					to: 'sessions#new',								via: 'get'
+	match '/signout',					to: 'sessions#destroy',						via: 'delete'
+	match '/admin', 					to: 'home_pages#admin',						via: 'get'
 
 	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
