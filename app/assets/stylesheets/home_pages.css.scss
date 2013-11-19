@@ -9,12 +9,8 @@
 
 
 //--- General template styles --- 
-.main-content {
-	margin-left: 3em;
-}
-
 .top-container, .bottom-container {
-	margin: 7px 0px 5px 0px;
+	margin: 0px 0px 5px 0px;
 }
 
 h1 {
@@ -100,6 +96,7 @@ h1 {
 	// cider-bucket -- Remove once Cider controller is genreated and
 	//									migrate CSS to the file for ciders
 	.cider-bucket {
+		clear: both;
 
 		.cider-label {
 			float: left;

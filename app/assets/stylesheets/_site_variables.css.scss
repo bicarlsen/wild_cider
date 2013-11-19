@@ -1,19 +1,30 @@
 // Defines global variables
 
-// Colors
+//--- Colors ---
+// scheme 1
 $apple-red: #B61B1B;
 $apple-green: #436117;
 $pumpkin-orange: #CC6600;
 
-$primary-color: $apple-red;
+// scheme 2
+$dark-red: #A60000;
+$light-red: #F44343;
+$salmon: #FFE0CA;
+$cream: #FFF0C0;
+
+
+// color definition
+$primary-color: $dark-red;
 $secondary-color: $apple-green;
-$tertiary-color: $pumpkin-orange;
+$tertiary-color: $cream;
 //$quaternary-color:
 
 
 // Font and Text
 $font-stack: sans;
 
+//$primary-text:;
+//$secondary-text:;
 
 
 

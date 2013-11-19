@@ -5,9 +5,11 @@
 	<%= link_to "Contact Us", contact_us_path, class: 'navigation_link' %>
 
 	<% if signed_in? %>
-		<%= link_to 'Admin', admin_path, class: 'admin-navigation navigation_link' %>
-		<%= link_to 'Sign Out', signout_path, method: :delete,
-			class: 'admin_navigation navigation-link' %>
+		<div class='admin-navigation-container'>
+			<%= link_to 'Admin', admin_path, class: 'admin-navigation navigation_link' %>
+			<%= link_to 'Sign Out', signout_path, method: :delete,
+				class: 'admin_navigation navigation-link' %>
+		</div>
 	<% end %>
 </nav>
 
