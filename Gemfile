@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+#ruby-gemset=production
 ruby '2.0.0'
 gem 'rails', '4.0.0'
+
 # gem 'bootstrap-sass'
+gem 'faker'
 
 group :development do
 	# Use sqlite3 as the database for Active Record
@@ -18,6 +21,13 @@ group :test do
 	# Use Capybara
 	gem 'capybara'
 	gem 'selenium-webdriver'
+
+	# Use FacotryGirl
+	gem 'factory_girl_rails'
+
+	# Use Guard for auto testing
+	gem 'guard-rspec'
+	gem 'libnotify'
 end
 
 group :production do
@@ -55,7 +65,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'

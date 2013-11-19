@@ -4,7 +4,7 @@
 			<%= update_summary.title %> 
 		</span>
 		<span class='post-date'>
-			<%= update_summary.post_at.strftime('(%a %b %-d at %l:%M %P)')%>
+			<%= update_summary.post_at.localtime.strftime('(%a %b %-d at %l:%M %P)')%>
 		</span>
 	</div>
 	<div class='update-summary-description short-description'>

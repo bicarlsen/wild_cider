@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028014232) do
+ActiveRecord::Schema.define(version: 20131109202756) do
 
   create_table "ciders", force: true do |t|
     t.string   "name"
@@ -38,7 +38,22 @@ ActiveRecord::Schema.define(version: 20131028014232) do
     t.datetime "post_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "full_url"
+    t.string   "link_to"
   end
+
+  add_index "updates", ["post_at"], name: "index_updates_on_post_at"
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+    t.string   "remember_token"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", unique: true
 
 end

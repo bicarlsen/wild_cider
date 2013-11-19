@@ -43,4 +43,9 @@ RSpec.configure do |config|
 	# Include Capybara
 	config.include Capybara::DSL
 
+	# USER ADDED
+	
+	# Include SessionsHelper module
+	# config.include SessionsHelper
+
 end
