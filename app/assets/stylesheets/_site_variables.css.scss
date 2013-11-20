@@ -7,11 +7,13 @@ $apple-green: #436117;
 $pumpkin-orange: #CC6600;
 
 // scheme 2
+$burnt-red: #5F0D0A;
 $dark-red: #A60000;
 $light-red: #F44343;
 $salmon: #FFE0CA;
 $cream: #FFF0C0;
 
+$mid-grey: #585858;
 
 // color definition
 $primary-color: $dark-red;
@@ -22,9 +24,9 @@ $tertiary-color: $cream;
 
 // Font and Text
 $font-stack: sans;
-
-//$primary-text:;
-//$secondary-text:;
+$title-text: $dark-red;
+$primary-text: $burnt-red;
+$secondary-text: $mid-grey;
 
 
 
