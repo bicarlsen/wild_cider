@@ -1,0 +1,11 @@
+@import 'site_variables';
+
+body {
+	font: $font-stack;
+	color: $primary-text;
+}
+
+a {
+	text-decoration: none;
+}
+

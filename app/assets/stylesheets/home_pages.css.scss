@@ -24,18 +24,42 @@ h1 {
 	display: inline-block;
 	width: 60%;
 	max-width: 800px; 
-
 	margin-right: 20px;
+
+	background-color: $tertiary-color;
 
 	.update-image {
 		margin-left: 3em;
-		//text-align: center;
-	}
+		height: 15em;
 
-	.updates-list {
+		img {
+			height: 100%;
+		}
+	} // .update-image
+
+	.updates-container {
 		padding-left: 1em;
-	}
-}
+		
+		.updates-list {
+			list-style: none;
+
+			.update-summary {
+				margin: 1em 0em;
+
+				.update-summary-title {
+					font-size: 1.2em;
+					font-weight: bold;
+					color: $title-text;
+				}
+
+				.post-date {
+					font-size: 0.8em;
+					color: $secondary-text;
+				}
+			} // .update-summary
+		} // .updates-list
+	} // .updates-container
+} // .updates-module
 
 .ad-module {
 	display: inline-block;
@@ -68,7 +92,7 @@ h1 {
 			background-repeat: no-repeat;
 
 			padding-left: 1.4em;
-			margin-right: 2em;
+			margin-right: 3em;
 		}
 
 		#to-summer-ciders {
@@ -88,6 +112,10 @@ h1 {
 		}
 	} // end cider-navigation
 
+	.season-title {
+		color: $title-text;
+	}
+
 	.seasonal-cider-container {
 		clear: both;
 	}
@@ -106,6 +134,7 @@ h1 {
 
 		.cider-content {
 			.cider-name {
+				color: $title-text;
 				font-weight: 600;
 				padding-left: 2em;
 			}
@@ -123,6 +152,10 @@ h1 {
 
 .cidery-module {
 	margin-top: 2em;
+
+	.cidery-content {
+		font-size: 1.1em;
+	}
 }
 
 
