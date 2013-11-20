@@ -10,11 +10,19 @@
 
 //--- General template styles --- 
 .top-container, .bottom-container {
+	clear: both;
 	margin: 0px 0px 5px 0px;
 }
 
+.left-container {
+	float: left;
+}
+
+.right-container {
+	float: right;
+}
+
 h1 {
-	width: 75%;
 	text-align: center;
 }
 
@@ -57,6 +65,10 @@ h1 {
 					color: $secondary-text;
 				}
 
+				.update-summary-description {
+					text-align: justify;
+				}
+
 				.external-link {
 					font-size: 0.9em;
 					color: $contrast-text;
@@ -68,7 +80,7 @@ h1 {
 					&:hover {
 						cursor: pointer;
 					}	
-				}
+				} // .external-link
 			} // .update-summary
 		} // .updates-list
 	} // .updates-container
@@ -97,8 +109,11 @@ h1 {
 }
 
 .cider-module {
-	
+
 	.cider-navigation {
+		text-align: center;
+		width: 100%;
+
 		.anchor-link { 
 			// TODO: figure out how to make all links same width
 			background-size: 1.2em 1.2em;
@@ -106,7 +121,7 @@ h1 {
 			color: $primary-text;
 			
 			padding-left: 1.4em;
-			margin-right: 3em;
+			margin: 0.1em 2em;
 
 		} // .anchor-link
 
@@ -155,7 +170,8 @@ h1 {
 			}
 
 			.cider-description {
-				
+				text-align: justify;
+				width: 65%;
 			}
 		} // end cider-content
 	} // end cider-bucket
@@ -170,7 +186,7 @@ h1 {
 	
 	.cidery-image-container {
 		height: 25em;
-	
+			
 		background: image-url('cidery_feature_large.jpg') no-repeat;
 		background-size: cover;
 		
@@ -211,6 +227,18 @@ h1 {
 		
 	} // end person-container
 } // end person-bucket
+
+
+//---- Contact Us ----
+#contact-us-module {
+	margin: 0 15%;
+
+	.label {
+		color: $contrast-text;
+		font-weight: bold;
+	}
+} // #contact-us-module
+
 
 
 
