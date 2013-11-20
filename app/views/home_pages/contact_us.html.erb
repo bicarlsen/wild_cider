@@ -5,7 +5,8 @@
 		<div class='left-container'>
 			<div class='email'>
 				<span class='label'>Email</span>
-				test@test.com
+				<%= link_to 'info@wildcider.com', 'mail_to:info@wildcider.com',
+		 					class: 'mail-link' %>
 			</div>
 
 			<div class='phone'>
@@ -15,24 +16,27 @@
 		</div>
 
 		<div class='right-container'>
-			<span class='address'>
-				11455 County Road 17 <br />
-				Firestone, Colorado 80504
-			</span>
-			<%= link_to image_tag('test/temp_image_thumbnail.png'),
-				'http://bing.com/maps/default.aspx?v=2&pc=FACEBK
-					&mid=8100&where1=11455+County+Road+17%2C+Firestone%2C+Colorado+80504
-					&FORM=FBKPL0&name=Wild+Cider&mkt=en-US', target: '_blank' %>
+			<span id='address-label' class='label'>Address</span>
+			<%= link_to( 
+						raw('<span class="address">
+									11455 County Road 17 <br />
+									Firestone, Colorado 80504
+									</span>'),
+					'http://bing.com/maps/default.aspx?v=2&pc=FACEBK
+						&mid=8100&where1=11455+County+Road+17%2C+Firestone%2C+Colorado+80504
+						&FORM=FBKPL0&name=Wild+Cider&mkt=en-US', target: '_blank') 
+			%>
 		</div>
 	</div> 
 
 	<div class='bottom-container'>
-		<span class='facebook'>
-			<%= link_to image_tag('test/temp_image_thumbnail.png'), 
-				'https://www.facebook.com/wildciderco', target: '_blank' %>
+		<span id='facebook' class='icon-container'>
+			<%= link_to image_tag('icons/facebook-icon.jpeg', class: 'icon'), 
+				'https://www.facebook.com/wildciderco', target: '_blank'
+		 		%>
 		</span>
-		<span class='twitter'>
-			<%= link_to image_tag('test/temp_image_thumbnail.png'),
+		<span id='twitter' class='icon-container'>
+			<%= link_to image_tag('icons/twitter-icon.jpeg', class: 'icon'),
 				'http://www.twitter.com', target: '_blank' %>
 		</span>
 	</div>

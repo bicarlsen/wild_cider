@@ -3,14 +3,19 @@
 @import 'site_variables';
 @import 'mixins';
 
+//--- Body ---
+body {
+	@include radial-gradient-background($tertiary-color, white);
+} // body
+
 //--- Header ---
 header {
 	@include radial-gradient-background($salmon, $light-red, 200%);
 	//background-color: $tertiary-color;
 	
 	height: 14em;
-	margin: 0 2.5%;
-	padding: 0 10% 0.5em 10%;
+	margin: 0;
+	padding: 0 12.5% 0.5em 12.5%;
 	border-bottom: $primary-color solid 3px;
 
 	.logo-container {
@@ -64,9 +69,6 @@ header {
 .main-content {
 	margin: 0 10%;
 	padding: 0 2.5%;
-	
-	//background-color: $burly-wood;
-	//@include radial-gradient-background($tertiary-color, white, 200%, 80%)
 } // .main-content
 
 // footer

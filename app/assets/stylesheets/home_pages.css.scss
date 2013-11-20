@@ -75,6 +75,7 @@ h1 {
 
 					&:hover, &:active {
 						font-weight: bold;
+						text-decoration: none;
 					}
 
 					&:hover {
@@ -126,19 +127,19 @@ h1 {
 		} // .anchor-link
 
 		#to-summer-ciders {
-			background-image: asset-url('sun-icon.jpg');
+			background-image: asset-url('icons/sun-icon.png');
 		}
 
 		#to-fall-ciders {
-			background-image: asset-url('leaf-icon.jpg');
+			background-image: asset-url('icons/leaf-icon.png');
 		}
 	
 		#to-winter-ciders {
-			background-image: asset-url('snowflake-icon.jpg');
+			background-image: asset-url('icons/snowflake-icon.png');
 		}
 
 		#to-spring-ciders {
-			background-image: asset-url('sprout-icon.jpg');
+			background-image: asset-url('icons/sprout-icon.png');
 		}
 	} // end cider-navigation
 
@@ -234,9 +235,36 @@ h1 {
 	margin: 0 15%;
 
 	.label {
-		color: $contrast-text;
-		font-weight: bold;
+		color: $secondary-text;
+		font-size: 1.3em;
+
+		&#address-label {
+			display: block;
+		}
+	} // .label
+
+	a {
+		color: $primary-text;
 	}
+
+	.top-container {
+		margin-bottom: 2em;
+	}
+
+	.bottom-container {
+		text-align: center;
+
+		.icon-container {
+			margin: 0.3em 0.3em;
+
+			.icon {
+				height: 2em;
+				width: 2em;
+
+				margin: 0;
+			}
+		} // .icon-container
+	} // .bottom-container
 } // #contact-us-module
 
 
