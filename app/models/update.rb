@@ -1,7 +1,7 @@
 class Update < ActiveRecord::Base
 	# Callbacks
-	before_validation :set_default_values
-	before_save :resolve_image
+	after_initialize :initialize_default_values
+	before_save :resolve_image, :adjust_time
 
 	# Validations
 	validates :title, presence: true
@@ -10,6 +10,7 @@ class Update < ActiveRecord::Base
 	validates :post_at, presence: true
 
 	# Instance Methods
+	
 	def set_image(image_file)
 		image_name = "#{Time.now.to_i}--#{image_file.original_filename}"
 	
@@ -26,10 +27,13 @@ class Update < ActiveRecord::Base
 
 	private
 	
-		def set_default_values 
+		def initialize_default_values
+			self.post_at = Time.now
+		end # initialize_default_values
+
+		def adjust_time
 			# standardize post_at times
-			post_at ||= Time.now
-			post_at = post_at.utc
+			self.post_at = self.post_at.utc
 		end # set_default_values
 
 		# Saves image if needed and set the image_file attribute

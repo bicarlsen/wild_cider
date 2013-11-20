@@ -6,6 +6,8 @@
 //--- Body ---
 body {
 	@include radial-gradient-background($tertiary-color, white);
+
+	font-family: $font-stack;
 } // body
 
 //--- Header ---

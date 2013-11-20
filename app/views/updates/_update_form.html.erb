@@ -14,9 +14,9 @@
 		<%= f.text_field :link_to %>
 	<div class='form-group'>
 		<%= f.label :post_at, 'Post' %>
-		<%#= f.datetime_field :post_at %>
-		<%= f.date_field :post_at  %>
-		<%= f.time_field :post_at, ignore_date: true %>
+		<%= f.date_select :post_at %>
+		<span class='form-label'>at</span>
+		<%= f.time_select :post_at %>
 	</div>
 	<div class='form-group'>
 		<%= f.label :description %>
