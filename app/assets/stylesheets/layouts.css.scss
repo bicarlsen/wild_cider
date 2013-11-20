@@ -11,6 +11,7 @@ header {
 	height: 14em;
 	margin: 0;
 	padding: 0 12.5% 0.5em 12.5%;
+	border-bottom: $primary-color solid 3px;
 
 	.logo-container {
 		height: 90%;
@@ -25,6 +26,8 @@ header {
 	nav {
 		position: relative;
 		padding: 0.1em 0em;
+
+		text-align: center;
 
 		a {	
 			padding: 0.3em 2em;
@@ -44,10 +47,14 @@ header {
 		
 		.admin-navigation-container {
 			display: inline-block;
-			position: absolute;
-			right: 0px;
+			//position: absolute;
+			//right: 0px;
+			
+			margin-left: 1em;
 
-			margin: 0;
+			a {
+				padding: 0.3em 0.5em;
+			}
 		} // .admin-navigation-container
 	} // nav
 } // header
@@ -56,10 +63,12 @@ header {
 .main-content {
 	margin: 0 10%;
 	padding: 0 2.5%;
-
+	
+	//background-color: $burly-wood;
+	//@include radial-gradient-background($tertiary-color, white, 200%, 80%)
 } // .main-content
 
 // footer
 footer {
-
+	min-height: 10em;
 } // footer

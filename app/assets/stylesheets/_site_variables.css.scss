@@ -11,15 +11,20 @@ $burnt-red: #5F0D0A;
 $dark-red: #A60000;
 $light-red: #F44343;
 $salmon: #FFE0CA;
-$cream: #FFF0C0;
 
+$lavendar: #E1B0FF;
+
+$cream: #FFF0C0;
 $mid-grey: #585858;
+$light-grey: #DADADA;
+$burly-wood: #DEB887;
+$burlap: #B9A37A;
 
 // color definition
 $primary-color: $dark-red;
-$secondary-color: $apple-green;
-$tertiary-color: $cream;
-//$quaternary-color:
+$secondary-color: $light-red;
+$tertiary-color: $light-grey;
+//$quaternary-color: $off-white;
 
 
 // Font and Text
@@ -27,7 +32,7 @@ $font-stack: sans;
 $title-text: $dark-red;
 $primary-text: $burnt-red;
 $secondary-text: $mid-grey;
-
+$contrast-text: $apple-green;
 
 
 

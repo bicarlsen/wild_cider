@@ -26,7 +26,7 @@ h1 {
 	max-width: 800px; 
 	margin-right: 20px;
 
-	background-color: $tertiary-color;
+	//background-color: $tertiary-color;
 
 	.update-image {
 		margin-left: 3em;
@@ -55,6 +55,19 @@ h1 {
 				.post-date {
 					font-size: 0.8em;
 					color: $secondary-text;
+				}
+
+				.external-link {
+					font-size: 0.9em;
+					color: $contrast-text;
+
+					&:hover, &:active {
+						font-weight: bold;
+					}
+
+					&:hover {
+						cursor: pointer;
+					}	
 				}
 			} // .update-summary
 		} // .updates-list
@@ -90,25 +103,27 @@ h1 {
 			// TODO: figure out how to make all links same width
 			background-size: 1.2em 1.2em;
 			background-repeat: no-repeat;
-
+			color: $primary-text;
+			
 			padding-left: 1.4em;
 			margin-right: 3em;
-		}
+
+		} // .anchor-link
 
 		#to-summer-ciders {
-			background-image: asset-url('test/temp_image_thumbnail.png');
+			background-image: asset-url('sun-icon.jpg');
 		}
 
 		#to-fall-ciders {
-			background-image: asset-url('test/temp_image_thumbnail.png');
+			background-image: asset-url('leaf-icon.jpg');
 		}
 	
 		#to-winter-ciders {
-			background-image: asset-url('test/temp_image_thumbnail.png');
+			background-image: asset-url('snowflake-icon.jpg');
 		}
 
 		#to-spring-ciders {
-			background-image: asset-url('test/temp_image_thumbnail.png');
+			background-image: asset-url('sprout-icon.jpg');
 		}
 	} // end cider-navigation
 
@@ -152,11 +167,23 @@ h1 {
 
 .cidery-module {
 	margin-top: 2em;
+	
+	.cidery-image-container {
+		height: 25em;
+	
+		background: image-url('cidery_feature_large.jpg') no-repeat;
+		background-size: cover;
+		
+		img {
+			height: 100%;
+		}
+	}
 
 	.cidery-content {
 		font-size: 1.1em;
+		text-align: justify;
 	}
-}
+} // .cidery-module
 
 
 // Move person-bucket CSS to specific file when created

@@ -8,7 +8,11 @@
 		</span>
 	</div>
 	<div class='update-summary-description short-description'>
-			<%= summarize update_summary.description %>
+		<%= update_summary.description %>
+		<% if update_summary.link_to %>
+			<%= link_to 'Read More...', update_summary.link_to, target: '_blank',
+	 					class: 'external-link'	%>
+		<% end %>
 	</div>
 </li>
 
