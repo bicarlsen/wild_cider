@@ -1,0 +1,39 @@
+@mixin radial-gradient-background($center-color, $edge-color, 
+																	$distance: 100%, $vertical-start: 50%) {
+	// Safari 4-5, Chrome 1-9
+	background-image: -webkit-gradient(radial, center $vertical-start, 0, 
+		center $vertical-start, 1000, 
+		from($center-color), to($edge-color) );
+
+	// Safari 5.1+, Chrome 10+
+ 	background-image: -webkit-radial-gradient(center $vertical-start, ellipse cover, 
+		$center-color, $edge-color $distance);
+ 
+	// Firefox
+	background-image: -moz-radial-gradient(center $vertical-start, ellipse cover, 
+		$center-color, $edge-color $distance);
+
+	// IE 10+
+	background-image: -ms-radial-gradient(center $vertical-start, ellipse cover, 
+		$center-color, $edge-color $distance);
+ 	
+	// Opera
+	background-image: -o-radial-gradient(center $vertical-start, ellipse cover, 
+		$center-color, $edge-color $distance);
+ 
+	// Default	
+	background-image: radial-gradient(center $vertical-start, ellipse cover, 
+		$center-color, $edge-color $distance);
+} // radial-gradient-background
+
+@mixin horizontal-gradient-background($center-color, $edge-color, 
+																			$edge-offset: 0) {
+	$start-edge: "#{0 - $edge-offset}%";
+	$end-edge: "#{100 + $edge-offset}%";
+
+	// default
+	background-image: linear-gradient(to right, $edge-color, 
+		$center-color 50%, $edge-color);
+} // horizontal-gradient-background
+
+
