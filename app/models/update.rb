@@ -19,8 +19,8 @@ class Update < ActiveRecord::Base
 		# write image to app/assets/images/updates
 		File.open(Rails.root.join('app', 'assets', 'images', 
 																'updates', image_name), 'wb') do |file|
-			image_file.rewind
-			file.write image_file.read
+			self.image_file.rewind
+			file.write self.image_file.read
 		end 
 	end # set_image
 
@@ -37,8 +37,12 @@ class Update < ActiveRecord::Base
 
 		# Saves image if needed and set the image_file attribute
 		def resolve_image
-			unless image_file.is_a? String
-				set_image(image_file)
+			if self.image_file
+				unless self.image_file.is_a? String
+					set_image(image_file)
+				end
+			else
+				self.image_file = 'updates/default.png'
 			end
 		end # resolve_image
 end
