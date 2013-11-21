@@ -12,7 +12,7 @@ class Update < ActiveRecord::Base
 	# Instance Methods
 	
 	def set_image(image_file)
-		image_name = "#{Time.now.to_i}--#{image_file.original_filename}"
+		image_name = "#{Time.now.to_i}-#{image_file.original_filename}"
 	
 	  # set attribute
 	  self.image_file = "updates/#{image_name}"
