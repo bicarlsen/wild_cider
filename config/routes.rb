@@ -6,7 +6,7 @@ WildCider::Application.routes.draw do
 	resources :sessions, only: [:new, :create, :destroy]
 	
 	root 	'home_pages#index'
-	match '/cider', 					to: 'home_pages#cider',						via: 'get'
+	match '/the_cider', 			to: 'home_pages#cider',						via: 'get'
 	match '/about_us', 				to: 'home_pages#about_us',				via: 'get'
  	match '/contact_us', 			to: 'home_pages#contact_us',			via: 'get'
 	match '/signin', 					to: 'sessions#new',								via: 'get'
