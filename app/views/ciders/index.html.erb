@@ -1,0 +1,17 @@
+<h1>Ciders</h1>
+<%= render 'shared/flash_messages' %>
+
+<div>
+	<%= link_to 'New Cider', new_cider_path %>
+</div>
+
+<ul>
+<% @ciders.each do |cider| %>
+	<li>
+		<%= link_to cider.name, cider_path(cider) %>
+		<%= link_to 'Delete', cider_path(cider), method: :delete,
+ 					data: { confirm: 'Are you sure you want to delete this cider?' }	%>
+	</li>
+<% end %>
+</ul>
+

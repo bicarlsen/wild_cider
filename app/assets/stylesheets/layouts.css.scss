@@ -6,7 +6,8 @@
 //--- Body ---
 body {
 	@include radial-gradient-background($tertiary-color, white);
-
+	//background: asset-url('shared/site_border.jpg');
+	
 	font-family: $font-stack;
 } // body
 
@@ -67,7 +68,24 @@ header {
 	} // nav
 } // header
 
-// main content
+
+//--- Borders ---
+.site-border {
+	width: 0;
+	height: 0;
+
+	&#site-border-left {
+		float: left;
+		background: asset-url('shared/cider_left_border.jpg');
+	}
+
+	&#site-border-right {
+		float: right;
+		background: asset-url('shared/cider_right_border.jpg');
+	}
+} // .site-border
+
+//--- Main Content ---
 .main-content {
 	margin: 0 10%;
 	padding: 0 2.5%;

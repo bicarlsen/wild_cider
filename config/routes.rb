@@ -2,6 +2,7 @@ WildCider::Application.routes.draw do
 	resources :updates
 	resources :people
 	resources :users
+	resources :ciders
 	resources :sessions, only: [:new, :create, :destroy]
 	
 	root 	'home_pages#index'

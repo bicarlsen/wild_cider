@@ -1,4 +1,7 @@
 <div class='top-container'>
+	<div id='feature-image-container'>
+		<%= image_tag 'mountain_view_feature.jpg', id: 'feature-image' %>	
+	</div>
 	<div class='updates-module'>
 		<h1>Happenings</h1>
 		<div class='update-image'>
@@ -17,13 +20,36 @@
 		</div>
 	</div>
 
-	<div class='ad-module'>
-		<div class='ad'>
-			<%#= image_tag "test/temp_image_medium.png"%>
+	<div class='right-container'>
+		<div class='contact-us'>
+			<h2>Get In Touch</h2>
+			<section>
+				<%= link_to( 
+							raw('<span class="address">
+										11455 County Road 17 <br />
+                    Firestone, Colorado 80504
+                  </span>'),
+              'http://bing.com/maps/default.aspx?v=2&pc=FACEBK
+		           &mid=8100&where1=11455+County+Road+17%2C+Firestone%2C+Colorado+80504
+							 &FORM=FBKPL0&name=Wild+Cider&mkt=en-US', target: '_blank') 
+				%>
+			</section>
+			<section>
+				(303) 532-9949
+			</section>
+			<section class='social-bar-container'>
+				<%= render 'shared/social_bar' %>
+			</section>
 		</div>
 
-		<div class='ad'>
-			<%#= image_tag "test/temp_image_medium.png"%>
+		<div class='ad-module'>
+			<div class='ad'>
+				<%#= image_tag "test/temp_image_medium.png"%>
+			</div>
+
+			<div class='ad'>
+				<%#= image_tag "test/temp_image_medium.png"%>
+			</div>
 		</div>
 	</div>
 </div>

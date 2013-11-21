@@ -27,6 +27,19 @@ h1 {
 }
 
 //--- Home page ---
+#feature-image-container {
+	padding: 0;
+	margin: 0;
+	border: thin $primary-color solid;
+	border-top: none;
+	
+	height: 20em;
+
+	#feature-image {
+		height: 20em;
+		width: 100%;
+	}
+} // #feature-image-container
 
 .updates-module {
 	display: inline-block;
@@ -86,6 +99,12 @@ h1 {
 		} // .updates-list
 	} // .updates-container
 } // .updates-module
+
+.contact-us {
+	section {
+		margin: 1em 0;
+	}
+}
 
 .ad-module {
 	display: inline-block;
@@ -250,18 +269,6 @@ h1 {
 	}
 
 	.bottom-container {
-		text-align: center;
-
-		.icon-container {
-			margin: 0.3em 0.3em;
-
-			.icon {
-				height: 2em;
-				width: 2em;
-
-				margin: 0;
-			}
-		} // .icon-container
 	} // .bottom-container
 } // #contact-us-module
 
