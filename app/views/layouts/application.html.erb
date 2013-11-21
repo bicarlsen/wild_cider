@@ -4,7 +4,9 @@
   <title>Wild Cider</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<%= csrf_meta_tags %>
+
+	<%= favicon_link_tag 'icons/wild-cider-icon.png' %>
 </head>
 <body>
 	<%= render partial: 'layouts/header' %>
