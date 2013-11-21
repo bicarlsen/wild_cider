@@ -27,6 +27,8 @@ doc/
 app/assets/images/test/
 app/assets/images/updates/*
 
+# Except
+!app/assets/images/uploads/default.png
 
 
 

@@ -6,7 +6,6 @@ class Update < ActiveRecord::Base
 	# Validations
 	validates :title, presence: true
 	validates :description, presence: true
-	validates :image_file, presence: true
 	validates :post_at, presence: true
 
 	# Instance Methods
