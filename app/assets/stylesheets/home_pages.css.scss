@@ -27,6 +27,21 @@ h1 {
 }
 
 //--- Home page ---
+#quick-contact {
+	position: absolute;
+	top: 8.5em;
+	right: 0;
+
+	text-align: right;
+	font-weight: bold;
+
+	margin: 0.5em 0.75em 0 0;
+
+	section {
+		margin: 0.75em 0;
+	}
+}
+
 #feature-image-container {
 	padding: 0;
 	margin: 0;
@@ -100,12 +115,6 @@ h1 {
 	} // .updates-container
 } // .updates-module
 
-.contact-us {
-	section {
-		margin: 1em 0;
-	}
-}
-
 .ad-module {
 	display: inline-block;
 	width: 35%;
@@ -176,10 +185,14 @@ h1 {
 	.cider-bucket {
 		clear: both;
 
-		.cider-label {
+		.cider-label-container {
 			float: left;
 			
 			margin: 0em 1em 1.3em 1em;
+
+			.cider-label {
+				height: 5em;
+			}
 		}
 
 		.cider-content {

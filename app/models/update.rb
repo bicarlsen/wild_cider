@@ -19,8 +19,8 @@ class Update < ActiveRecord::Base
 		# write image to app/assets/images/updates
 		File.open(Rails.root.join('app', 'assets', 'images', 
 																'updates', image_name), 'wb') do |file|
-			self.image_file.rewind
-			file.write self.image_file.read
+			image_file.rewind
+			file.write image_file.read
 		end 
 	end # set_image
 
