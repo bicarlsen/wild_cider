@@ -1,1 +1,12 @@
-<%= @cider.name %>
+<%= link_to 'Back to Ciders', ciders_path %>
+<%= link_to 'Delete', cider_path(@cider), method: :delete,
+			data: {confirm: 'Are you sure you want to delete this cider?'} %>
+
+
+<h1><%= @cider.name %></h1>
+<div>
+	<%= image_tag @cider.image_file %>
+	<%= @cider.season %>
+	<%= @cider.description %>
+</div>
+

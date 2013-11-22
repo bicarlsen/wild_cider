@@ -1,5 +1,5 @@
 <%= form_for @cider do |f| %>
-	<% render 'shared/form_errors', object: f.object %>
+	<%= render 'shared/form_errors', object: f.object %>
 
 	<div class='form-group'>
 		<%= f.label :name %>

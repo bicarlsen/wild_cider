@@ -44,7 +44,7 @@ class UpdatesController < ApplicationController
 	private
 
 		def update_params
-			params.require(:update).permit :title, :link_to, :post_at, :post_date, :post_time,
+			params.require(:update).permit :title, :link_to, :post_at,
 			 	:description, :image_file 
 		end # update_params
 

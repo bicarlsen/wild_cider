@@ -5,8 +5,8 @@
 		<div class='left-container'>
 			<div class='email'>
 				<span class='label'>Email</span>
-				<%= link_to 'info@wildcider.com', 'mail_to:info@wildcider.com',
-		 					class: 'mail-link' %>
+				<%= mail_to 'info@wildcider.com', 'info@wildcider.com', 
+					subject: 'Contact Us', class: 'mail-link' %>
 			</div>
 
 			<div class='phone'>

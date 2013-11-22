@@ -102,15 +102,21 @@ h1 {
 } // .updates-module
 
 .ad-module {
-	display: inline-block;
-	width: 35%;
-	vertical-align: top;
+	$ad-width: 15em;
+	$ad-height: 20em;
 
 	margin-top: 5em;
 	margin-left: 10px;
 
-	.ad {
+	.ad-container {
+		height: $ad-height;
+		width: $ad-width;
 		margin: 1em;
+
+		.ad {
+			max-height: $ad-height;
+			max-width: $ad-width;
+		}
 	}
 }
 
@@ -267,10 +273,15 @@ h1 {
 	}
 
 	.top-container {
-		margin-bottom: 2em;
+		overflow: auto;
 	}
 
 	.bottom-container {
+		margin-top: 5em;
+
+		.social-bar {
+			text-align: center;	
+		}
 	} // .bottom-container
 } // #contact-us-module
 

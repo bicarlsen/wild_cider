@@ -1,4 +1,6 @@
 class CidersController < ApplicationController
+	before_action :must_be_signed_in
+
 	def index
 		@ciders = Cider.all
 	end
@@ -24,11 +26,19 @@ class CidersController < ApplicationController
 	end
 
 	def edit 
-
+		@cider = Cider.find params[:id]
 	end
 
 	def update
-
+		#@cider = Cider.find params[:id]
+		
+		if @cider.update_attributes cider_params
+			flash[:success] = 'Cider updated!'
+			redirect_to ciders_path
+		else
+			flash.now[:error] = 'There was an error updating your cider.'
+			render 'edit'
+		end
 	end
 
 	def destroy
