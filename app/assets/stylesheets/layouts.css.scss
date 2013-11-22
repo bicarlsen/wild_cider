@@ -64,8 +64,20 @@ header {
 
 	#quick-contact {
 		position: absolute;
-		bottom: 0.5em;
-		right: 1em;
+		right: 0;
+		left: 0;
+		bottom: 1.5em;
+
+		#phone-number {
+			position: absolute;
+			left: 1em;
+		}
+
+		.social-bar-container {
+			position:  absolute;
+			right: 1em;
+			bottom: -1em; 
+		}
 	} // #quick-contact
 } // header
 
