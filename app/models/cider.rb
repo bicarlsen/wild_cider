@@ -42,7 +42,7 @@ class Cider < ActiveRecord::Base
 
 			# String
 			elsif self.season.is_a? String
-				self.season.capitalize!
+				self.season.downcase!.capitalize!
 				SEASONS.include? self.season ? self.season : false
 			end
 		end # resolve_season

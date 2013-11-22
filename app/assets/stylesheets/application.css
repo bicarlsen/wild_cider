@@ -12,10 +12,17 @@
  *= require_tree .
  */
 
+html {
+	min-height: 100%;
+}
+
 body {
+	min-height: 100%;
+	position: relative;
 	margin: 0;
 	padding: 0;
 }
+
 
 
 

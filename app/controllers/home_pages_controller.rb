@@ -23,6 +23,9 @@ class HomePagesController < ApplicationController
 	def contact_us
 	end # contact_us
 
+	def resources
+	end # resources
+
 	def admin
 		must_be_signed_in
 	end # admin

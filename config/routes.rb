@@ -9,6 +9,7 @@ WildCider::Application.routes.draw do
 	match '/the_cider', 			to: 'home_pages#cider',						via: 'get'
 	match '/about_us', 				to: 'home_pages#about_us',				via: 'get'
  	match '/contact_us', 			to: 'home_pages#contact_us',			via: 'get'
+	match '/resources',				to: 'home_pages#resources',				via: 'get'
 	match '/signin', 					to: 'sessions#new',								via: 'get'
 	match '/signout',					to: 'sessions#destroy',						via: 'delete'
 	match '/admin', 					to: 'home_pages#admin',						via: 'get'
