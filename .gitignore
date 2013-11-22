@@ -24,6 +24,7 @@ doc/
 .DS_Store
 .idea
 .secret
+.misc
 app/assets/images/test/
 app/assets/images/updates/*
 
