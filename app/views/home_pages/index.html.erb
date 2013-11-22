@@ -22,13 +22,7 @@
 
 	<div class='right-container'>
 		<div class='ad-module'>
-			<div class='ad-container'>
-				<%= image_tag "ads/of-beer.jpeg", class: 'ad' %>
-			</div>
-
-			<div class='ad-container'>
-				<%= image_tag "ads/bike-race.jpeg", class: 'ad' %>
-			</div>
+			<%= render partial: 'advertisement', collection:  @advertisements %>
 		</div>
 	</div>
 </div>

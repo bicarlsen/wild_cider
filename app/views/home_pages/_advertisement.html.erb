@@ -1,0 +1,18 @@
+<div class='ad-container'>
+	<% if advertisement.link_to %>
+		<%= link_to(
+				image_tag(advertisement.image_file, class: 'ad'),
+					advertisement.link_to,
+					class: 'ad-link' ) %>
+
+	<% else %>
+		<%= image_tag advertisement.image_file, class: 'ad' %>
+	<% end %>
+
+	<% if advertisement.description %>
+		<section class='ad-caption caption'>
+			<%= advertisement.description %>
+		</section>
+	<% end %>
+</div>
+

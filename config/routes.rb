@@ -1,5 +1,6 @@
 WildCider::Application.routes.draw do
 	resources :updates
+	resources :advertisements
 	resources :people
 	resources :users
 	resources :ciders

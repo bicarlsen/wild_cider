@@ -4,7 +4,8 @@ class UpdatesController < ApplicationController
 	def index
 		time = 1.week.ago
 		
-		@updates = Update.where("updated_at >= :time OR post_at >= :time", time: time).
+		@updates = Update.where('advertisement IS NULL').
+			where("updated_at >= :time OR post_at >= :time", time: time).
 			order('post_at DESC')
 	end
 

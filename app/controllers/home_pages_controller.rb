@@ -2,7 +2,11 @@ class HomePagesController < ApplicationController
 
 	def index
 		@updates = Update.where('post_at <= ?', Time.now.utc).
+			where('advertisement IS NULL').
 			order('post_at DESC').limit(3)
+
+		@advertisements = Update.where('advertisement IS NOT NULL').
+			order('advertisement')
 	end # index
 
 	def cider

@@ -1,0 +1,26 @@
+<h1>Recent Updates</h1>
+<%= render 'shared/flash_messages' %>
+<div>
+	<%= link_to 'Back to Admin', admin_path %>
+</div>
+
+<div>
+	<%= link_to 'New Ad', new_advertisement_path %>
+</div>
+	
+<% if @advertisements.any? %>
+	<ul id='updates-list'>
+		<% @advertisements.each do |ad| %>
+			<li class='update'>
+				<%= link_to ad.title, advertisement_path(ad) %>
+				<%= link_to 'Delete', advertisement_path(ad), method: :delete,
+					data: { confirm: 'Are you sure you want to delete this ad?' } %>
+			</li>	
+		<% end %>
+	</ul>
+
+<% else %>
+	No Ads
+
+<% end %>
+

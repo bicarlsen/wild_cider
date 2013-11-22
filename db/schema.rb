@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131121080616) do
+ActiveRecord::Schema.define(version: 20131122164404) do
 
   create_table "ciders", force: true do |t|
     t.string   "name"
@@ -34,13 +34,15 @@ ActiveRecord::Schema.define(version: 20131121080616) do
   create_table "updates", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "image_file",  default: "updates/default.png"
+    t.string   "image_file",    default: "updates/default.png"
     t.datetime "post_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link_to"
+    t.integer  "advertisement"
   end
 
+  add_index "updates", ["advertisement"], name: "index_updates_on_advertisement", unique: true
   add_index "updates", ["post_at"], name: "index_updates_on_post_at"
 
   create_table "users", force: true do |t|
