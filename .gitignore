@@ -26,7 +26,8 @@ doc/
 .secret
 .misc
 app/assets/images/test/
-app/assets/images/updates/*
+app/assets/images/updates/
+app/assets/images/advertisements/
 
 # Except
 !app/assets/images/uploads/default.png
