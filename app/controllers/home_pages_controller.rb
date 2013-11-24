@@ -5,8 +5,7 @@ class HomePagesController < ApplicationController
 			where('advertisement IS NULL').
 			order('post_at DESC').limit(3)
 
-		@advertisements = Update.where('advertisement IS NOT NULL').
-			order('advertisement')
+		@advertisements = Advertisement.active
 	end # index
 
 	def cider

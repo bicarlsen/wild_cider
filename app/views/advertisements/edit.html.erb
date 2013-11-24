@@ -1,0 +1,16 @@
+<h1>Edit Advertisement</h1>
+<%= link_to 'View All', advertisements_path %>
+<%= link_to 'Preview', advertisement_path(@advertisement) %>
+<%= link_to 'Delete', advertisement_path(@advertisement),
+			method: :delete, 
+			data: { confirm: 'Are you sure you want to delete this ad?' } %>
+
+<%= render 'shared/flash_messages'%>
+<%= render 'advertisement_form' %>
+
+
+
+
+
+
+

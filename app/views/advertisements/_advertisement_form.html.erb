@@ -1,4 +1,4 @@
-<%= form_for @advertisement, url: advertisements_path do |f| %>
+<%= form_for @advertisement do |f| %>
 	<%= render 'shared/form_errors', object: f.object %>
 
 	<div class='form-group'>
@@ -14,12 +14,18 @@
 		<%= f.text_field :link_to %>
 	</div>
 	<div class='form-group'>
-		<%= f.label :advertisement, 'Ad Number' %>
-		<%= f.select :advertisement, 1..Update::MAX_ADS %>
+		<%= f.label :position %>
+		<%= f.select :position, 1..Advertisement::MAX_ADS %>
+
+		<%= f.label :active %>
+		<%= f.check_box :active %>
 	</div>
 	<div class='form-group'>
-		<%= f.label :description, 'Caption' %>
-		<%= f.text_area :description %>
+		<%= f.label :caption %>
+		<%= f.text_field :caption %>
+
+		<%= f.label :display_caption %>
+		<%= f.check_box :display_caption %>
 	</div>
 	<div class='form-group'>
 		<%= f.submit 'Submit' %>

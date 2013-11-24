@@ -258,6 +258,10 @@ h1 {
 #contact-us-module {
 	margin: 0 15%;
 
+	.email-link {
+		display: inline;
+	}
+
 	.label {
 		color: $secondary-text;
 		font-size: 1.3em;

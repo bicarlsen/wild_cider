@@ -1,16 +1,12 @@
 class Update < ActiveRecord::Base
 	# Callbacks
 	after_initialize :initialize_default_values
-	before_save :resolve_image, :adjust_time, :resolve_advertisements
+	before_save :resolve_image, :adjust_time
 
 	# Validations
 	validates :title, presence: true
 	validates :description, presence: true
 	validates :post_at, presence: true
-
-	MAX_ADS = 3
-	validates :advertisement, inclusion: { in: (1..MAX_ADS) },
-		allow_nil: true
 
 	# Instance Methods
 	
@@ -31,7 +27,7 @@ class Update < ActiveRecord::Base
 	private
 	
 		def initialize_default_values
-			self.post_at = Time.now
+			self.post_at = Time.now if self.new_record?
 		end # initialize_default_values
 
 		def adjust_time
@@ -50,12 +46,4 @@ class Update < ActiveRecord::Base
 			end
 		end # resolve_image
 
-		# Resolves collisions with ad numbers by changing the
-		# current add with the same ad number to nil 
-		def resolve_advertisements
-			if self.advertisement
-				other_ad = Update.find_by advertisement: self.advertisement
-				other_ad.update_attribute :advertisement, nil if other_ad	
-			end
-		end # resolve_advertiements
 end

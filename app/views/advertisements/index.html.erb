@@ -13,6 +13,7 @@
 		<% @advertisements.each do |ad| %>
 			<li class='update'>
 				<%= link_to ad.title, advertisement_path(ad) %>
+				<%= link_to 'Edit', edit_advertisement_path(ad) %>
 				<%= link_to 'Delete', advertisement_path(ad), method: :delete,
 					data: { confirm: 'Are you sure you want to delete this ad?' } %>
 			</li>	

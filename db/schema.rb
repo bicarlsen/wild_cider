@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131122164404) do
+ActiveRecord::Schema.define(version: 20131123002152) do
+
+  create_table "advertisements", force: true do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.boolean  "active"
+    t.string   "caption"
+    t.boolean  "display_caption"
+    t.string   "image_file"
+    t.string   "link_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "advertisements", ["active"], name: "index_advertisements_on_active"
 
   create_table "ciders", force: true do |t|
     t.string   "name"

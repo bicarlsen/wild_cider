@@ -5,27 +5,28 @@
 		<div class='left-container'>
 			<div class='email'>
 				<span class='label'>Email</span>
-				<%= mail_to 'info@wildcider.com', 'info@wildcider.com', 
-					subject: 'Contact Us', class: 'mail-link' %>
+				<%= email_link %>
 			</div>
 
 			<div class='phone'>
 				<span class='label'>Phone</span>
-				(303) 532-9949
+				<%= phone_number %>
 			</div>
 		</div>
 
 		<div class='right-container'>
 			<span id='address-label' class='label'>Address</span>
-			<%= link_to( 
-						raw('<span class="address">
-									11455 County Road 17 <br />
-									Firestone, Colorado 80504
-									</span>'),
-					'http://bing.com/maps/default.aspx?v=2&pc=FACEBK
-						&mid=8100&where1=11455+County+Road+17%2C+Firestone%2C+Colorado+80504
-						&FORM=FBKPL0&name=Wild+Cider&mkt=en-US', target: '_blank') 
-			%>
+			<%= address_link %>
+<!--			
+			<div id='bing-map'>
+				<iframe width="325" height="280" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=40.166948~-104.904451&lvl=12&w=325&h=280&sty=r&typ=d&pp=Wild%20Cider~11445%20County%20Road%2017%2C%20Firestone%2C%20Colorado%2080504%3Cbr%2F%3E303-532-9949~40.166948~-104.904451&ps=&dir=0&mkt=en-us&src=O365&form=BMEMJS"></iframe>
+				<div style="margin: 12px 0 0 0;">
+					<a target="_blank" href="http://www.bing.com/maps/?cp=40.166948~-104.904451&sty=r&lvl=12&sp=point.40.166948_-104.904451_Wild%20Cider_11445%20County%20Road%2017%2C%20Firestone%2C%20Colorado%2080504%0A303-532-9949&mm_embed=map">View larger map</a>&nbsp; |&nbsp; 
+					<a target="_blank" href="http://www.bing.com/maps/?cp=40.166948~-104.904451&sty=r&lvl=12&rtp=~pos.40.166948_-104.904451_Wild%20Cider%2C%2011445%20County%20Road%2017%2C%20Firestone%2C%20Colorado%2080504_&mm_embed=dir">Get directions</a>&nbsp; |&nbsp; 
+					<a target="_blank" href="http://www.bing.com/maps/?cp=qpv17z67r4zk&sty=b&lvl=18&sp=point.40.166948_-104.904451_Wild%20Cider_11445%20County%20Road%2017%2C%20Firestone%2C%20Colorado%2080504%0A303-532-9949&mm_embed=be">View bird's eye</a>
+				</div>
+			</div> 
+-->
 		</div>
 	</div> 
 

@@ -1,22 +1,40 @@
-<h1>Update</h1>
+<h1>Advertisement</h1>
 
 <div class='navigation'>
 	<%= link_to 'View All', advertisements_path %>
+	<%= link_to 'Edit', edit_advertisement_path(@advertisement) %>
 	<%= link_to 'Delete', advertisement_path(@advertisement), method: :delete, 
 		data: { confirm: 'Are you sure you want to delete this ad?' } %>
 </div>
+<%= render 'shared/flash_messages' %>
 
-<div class='advertisement-container'>
-	<h4><%= @advertisement.title %></h4>
-	
-	<section>
-		Image: <%= @advertisement.image_file %>
-	</section>
-	<section>
-		Caption: <%= @advertisement.description%>
-	</section>
+<div class='ad-module'>
+	<h2><%= @advertisement.title %></h4>
+	<div id='display-parameters'>
+		Position:
+		<%= @advertisement.position %>;
+		<%= @advertisement.active? ? 'Active' : 'Inactive' %>
+	</div>
+	<div id='caption-paramenters'>
+		Caption:
+		<%= @advertisement.caption.blank? ? 'Empty' : @advertisement.caption %>;
+		<%= @advertisement.display_caption? ? 'Visible' : 'Hidden' %>
+	</div>
+	<div id='link-parameters'>
+		Link:
+		<% unless @advertisement.link_to.blank?%>
+			<%= @advertisement.link_to %>
+			<%= link_to 'Preview', @advertisement.link_to, target: '_blank' %>
+		
+		<% else %>
+			Not set
+
+		<% end %>
+	</div>
+	<div id='ad-preview'>
+		<%= render @advertisement %>
+	</div>
 </div>
-
 
 
 

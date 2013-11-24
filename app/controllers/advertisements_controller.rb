@@ -2,20 +2,19 @@ class AdvertisementsController < ApplicationController
 	before_action :must_be_signed_in
 	
 	def index
-		@advertisements = Update.where('advertisement IS NOT NULL').
-			order('advertisement ASC')
+		@advertisements = Advertisement.all
 	end
 
 	def show
-		@advertisement = Update.find params[:id]
+		@advertisement = Advertisement.find params[:id]
 	end
 
 	def new
-		@advertisement = Update.new
+		@advertisement =Advertisement.new
 	end
 
 	def create
-		@advertisement = Update.new advertisement_params
+		@advertisement = Advertisement.new advertisement_params
 
 		if @advertisement.save
 			flash[:success] = 'Ad created!'
@@ -26,8 +25,26 @@ class AdvertisementsController < ApplicationController
 		end
 	end
 
+	def edit
+		@advertisement = Advertisement.find params[:id]
+	end
+
+	def update
+		@advertisement = Advertisement.find params[:id]
+
+		if @advertisement.update_attributes advertisement_params
+			flash[:success] = 'Ad updated!'
+			redirect_to @advertisement
+		
+		else
+			flash.now[:error] = "There was an error updating your ad."
+			render 'edit'
+		
+		end
+	end
+
 	def destroy
-		ad = Update.find params[:id]
+		ad = Advertisement.find params[:id]
 		ad.destroy
 
 		flash[:success] = 'Ad destroyed!'
@@ -38,8 +55,8 @@ class AdvertisementsController < ApplicationController
 	private
 		
 		def advertisement_params
-			params.require(:update).permit :title, :image_file,
-				:advertisement, :description
+			params.require(:advertisement).permit :title, :image_file,
+				:position, :active, :display_caption, :caption
 		end
 
 end
