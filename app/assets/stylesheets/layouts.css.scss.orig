@@ -64,11 +64,33 @@ header {
 
 	#quick-contact {
 		position: absolute;
+		right: 0;
+		left: 0;
 		bottom: 0.5em;
+<<<<<<< HEAD
 		right: 1em;
 
 		.contact-info {
-			margin-bottom: 0.5em;
+			margin-bottom: 0.5em
+=======
+
+		#phone-number {
+			margin: 0;
+			padding: 0;
+
+			position: absolute;
+			left: 1em;
+			bottom: 0;
+		}
+
+		.social-bar-container {
+			margin: 0;
+			padding: 0;
+
+			position:  absolute;
+			right: 1em;
+			bottom: 0;
+>>>>>>> b-styling
 		}
 	} // #quick-contact
 } // header

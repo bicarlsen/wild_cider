@@ -1,0 +1,42 @@
+<header>
+	<div class='logo-container'>
+		<%= link_to image_tag('shared/header_logo.png', alt: "Wild Cider", 
+			class: "site-logo-image logo-image"), root_path %>
+	</div>
+
+	<%= render partial: 'layouts/navigation' %>
+	
+	<div id='quick-contact' class='contact-us'>
+<<<<<<< HEAD
+		<section class='contact-info'>
+			<%= phone_number %>
+			<%= address_link %>
+		</section>
+		
+=======
+		<section id='phone-number'>
+				(303) 532-9949
+		</section>
+>>>>>>> b-styling
+		<section class='social-bar-container'>
+			<%= render 'shared/social_bar' %>
+		</section>	
+	</div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
