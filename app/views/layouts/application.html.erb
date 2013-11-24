@@ -9,17 +9,16 @@
 	<%= favicon_link_tag 'icons/wild-cider-icon.png' %>
 </head>
 <body>
+	<div id='site-border-left' class='site-border'></div>
+	<div id='site-border-right' class='site-border'></div>
+
 	<%= render partial: 'layouts/header' %>
 	<%= render partial: 'layouts/alert_bar' %>
-	
-	<div id='site-border-left' class='site-border'></div>
-	
+
 	<div class='main-content'>
 		<%= yield %>
 	</div>
 	
-	<div id='site-border-right' class='site-border'></div>
-
 	<%= render partial: 'layouts/footer' %>
 </body>
 </html>

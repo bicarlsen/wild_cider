@@ -4,6 +4,7 @@
 @import 'mixins';
 
 //--- Variables ---
+$border-width: 12.5%;
 
 
 //--- Body ---
@@ -20,8 +21,8 @@ header {
 	
 	position: relative;
 	min-height: 12em;
-	margin: 0;
-	padding: 0 12.5% 0.5em 12.5%;
+	margin: 0 $border-width;
+	padding: 0 0 0.5em;
 	border-bottom: $primary-color solid 3px;
 
 	.logo-container {
@@ -64,10 +65,13 @@ header {
 	#quick-contact {
 		position: absolute;
 		bottom: 0.5em;
+<<<<<<< HEAD
 		right: 1em;
 
 		.contact-info {
 			margin-bottom: 0.5em
+=======
+
 		}
 	} // #quick-contact
 } // header
@@ -75,24 +79,34 @@ header {
 
 //--- Borders ---
 .site-border {
-	width: 0;
-	height: 0;
+	position: absolute;
+	top: 0;
+
+	width: $border-width;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	&#site-border-left {
-		float: left;
-		background: asset-url('shared/cider_left_border.jpg');
+		left: 0;
+		background-image: asset-url('shared/cider_left_border.jpg');
 	}
 
 	&#site-border-right {
-		float: right;
-		background: asset-url('shared/cider_right_border.jpg');
+		right: 0;
+		background-image: asset-url('shared/cider_right_border.jpg');
 	}
 } // .site-border
 
 //--- Main Content ---
 .main-content {
-	margin: 0 10%;
-	padding: 0 2.5%;
+	$content-padding: 2.5%;
+
+	margin: 0 ($border-width - $content-padding);
+	padding: 0 $content-padding;
 } // .main-content
 
 // footer
@@ -102,8 +116,8 @@ footer {
 	background-color: $secondary-color;
 	width: 75%;
 	height: 3em;
-	padding: 1em 12.5% 0; 
-	margin-top: 10em;
+	padding: 1em 0 0; 
+	margin: 10em $border-width 0;
 
 	text-align: center;
 
