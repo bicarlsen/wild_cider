@@ -1,6 +1,13 @@
 <div class='top-container'>
-	<div id='feature-image-container'>
-		<%= image_tag 'mountain_view_feature.jpg', id: 'feature-image' %>	
+	<div id='feature-image-container' class='slide-show'>
+		<%= image_tag 'features/mountain_view.jpg', class: 'feature-image active',
+			data: { order: 1 } %>
+		<%= image_tag 'features/blossom_tree.jpg', class: 'feature-image', 
+			data: { order: 2 } %>
+		<%= image_tag 'features/keg_stack.jpg', class: 'feature-image', 
+			data: { order: 3 } %>
+		<%= image_tag 'features/blossom_tree.jpg', class: 'feature-image', 
+			data: { order: 4 } %>
 	</div>
 	<div class='updates-module'>
 		<h1>Happenings</h1>

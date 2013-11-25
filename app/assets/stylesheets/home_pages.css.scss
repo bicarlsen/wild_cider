@@ -29,15 +29,28 @@ h1 {
 //--- Home page ---
 
 #feature-image-container {
+	position: relative;
+
 	padding: 0;
 	margin: 0;
 	border-bottom: thin $primary-color solid;
-	
 	height: 20em;
+	overflow: hidden;
 
-	#feature-image {
-		height: 20em;
+	.feature-image {
+		position: absolute;
+		display: none;
+		height: 100%;
 		width: 100%;
+
+		&.active {
+			display: inline;
+			z-index: 10;
+
+			&.retiring {
+				z-index: 9;
+			}
+		}
 	}
 } // #feature-image-container
 
