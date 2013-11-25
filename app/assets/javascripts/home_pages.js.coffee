@@ -4,7 +4,7 @@
 
 #--- Main ---
 $(document).ready ->
-	scroll_slide_show(6000)
+	scroll_slide_show()
 
 
 
@@ -14,7 +14,7 @@ $(document).ready ->
 # Index Page
 # Activates the next feature image, and hides the current one
 next_slide = (slideTime = 1300) ->
-	totalImages = 3 #TODO: get this on the page, not hardcoded
+	totalImages = 4 #TODO: get this on the page, not hardcoded
 	
 	container = $('.slide-show')
 	containerWidth = container.width()
@@ -33,10 +33,9 @@ next_slide = (slideTime = 1300) ->
 					active.removeClass('active retiring')
 			)
 
-
 # Index Page
 # Scrolls the slide show images with animation
-scroll_slide_show = (display_time = 6000, slide_time) ->
+scroll_slide_show = (display_time = 8000, slide_time) ->
 	setInterval(next_slide, display_time)
 	
 
