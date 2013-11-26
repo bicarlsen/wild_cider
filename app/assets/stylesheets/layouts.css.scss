@@ -62,16 +62,25 @@ header {
 		} // .admin-navigation-container
 	} // nav
 
-	#worlds-best-container {
-		position: absolute;
-		top: 0.5em;
-		left: 1em;
-
+	.slogan {
 		font-weight: bold;
 		font-size: 1.5em;
 		color: white;
 		text-shadow: 2px 2px 1px $primary-text;
-	} // #worlds-best-container
+		
+		&#worlds-best-container {
+			position: absolute;
+			top: 0.5em;
+			left: 1em;
+
+		} // #worlds-best-container
+
+		&#gluten-free-container {
+			position: absolute;
+			top: 0.5em;
+			right: 1em;
+		}
+	} // .slogan
 
 	#quick-contact {
 		position: absolute;
