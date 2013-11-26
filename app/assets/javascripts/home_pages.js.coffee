@@ -23,6 +23,7 @@ next_slide = (slideTime = 1300) ->
 	currentPosition = active.data('order')
 	nextPosition = (currentPosition % totalImages) + 1
 	next = container.find("[data-order=#{nextPosition}]")
+	inactive = container.find('.slide-show-image').not(next)
 
 	active.addClass('retiring')
 	next.addClass('active')
@@ -30,7 +31,7 @@ next_slide = (slideTime = 1300) ->
 
 	container.find('.active').animate({ right: "+=#{containerWidth}" }, slideTime,
 				->
-					active.removeClass('active retiring')
+					inactive.removeClass('active retiring')
 			)
 
 # Index Page
