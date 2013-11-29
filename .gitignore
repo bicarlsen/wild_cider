@@ -28,6 +28,7 @@ doc/
 app/assets/images/test/
 app/assets/images/updates/
 app/assets/images/advertisements/
+old/
 
 # Except
 !app/assets/images/uploads/default.png
