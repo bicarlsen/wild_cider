@@ -1,6 +1,8 @@
 // Defines global variables
 
 //--- Colors ---
+
+/*
 // scheme 1
 $apple-red: #B61B1B;
 $apple-green: #436117;
@@ -19,19 +21,29 @@ $mid-grey: #585858;
 $silver: #E6E8FA;
 $burly-wood: #DEB887;
 $burlap: #B9A37A;
+*/
+
+// scheme 3
+$dark-grey: #323737;
+$light-grey: #4D5152;
+$pale-green: #A1DD00;
+$salmon: #FF5869;
+$pale-yellow: #EADC63;
+$more-pale-yellow: #F4EEB1;
+$apple-green: #436117;
 
 // color definition
-$primary-color: $dark-red;
-$secondary-color: $light-red;
-$tertiary-color: $silver;
-$quaternary-color: $apple-green;
+$primary-color: $pale-yellow; //dark-grey;
+$secondary-color: $pale-yellow;
+$tertiary-color: $salmon;
+$quaternary-color: $pale-green;
 
 
 // Font and Text
 $font-stack: Verdana, sans-serif;
-$title-text: $dark-red;
-$primary-text: $burnt-red;
-$secondary-text: $mid-grey;
+$title-text: $salmon;
+$primary-text: $dark-grey;
+$secondary-text: $salmon;
 $contrast-text: $apple-green;
 
 

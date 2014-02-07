@@ -30,6 +30,8 @@ class HomePagesController < ApplicationController
 	end # resources
 
 	def admin
-		must_be_signed_in
+		unless signed_in? && is_admin
+			redirect_to root_path
+		end
 	end # admin
 end

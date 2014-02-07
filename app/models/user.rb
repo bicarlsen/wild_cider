@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 	# Callbacks
 	before_save do
 		self.email = email.downcase
-		:set_defaults
 	end
 
 	before_create :create_remember_token
@@ -32,8 +31,4 @@ class User < ActiveRecord::Base
 		def create_remember_token
 			self.remember_token = User.encrypt(User.new_remember_token)
 		end 
-
-		def set_defaults
-			admin ||= false
-		end
 end

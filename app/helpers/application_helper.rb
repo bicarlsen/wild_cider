@@ -1,5 +1,6 @@
 module ApplicationHelper
 	include SessionsHelper
+	include UsersHelper
 
 	# Global variables
 	

@@ -1,5 +1,5 @@
 class CidersController < ApplicationController
-	before_action :must_be_signed_in
+	before_action :must_be_signed_in, :must_be_admin
 
 	def index
 		@ciders = Cider.all

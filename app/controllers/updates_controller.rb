@@ -1,5 +1,5 @@
 class UpdatesController < ApplicationController
-	before_action :must_be_signed_in
+	before_action :must_be_signed_in, :must_be_admin
 	
 	def index
 		time = 1.week.ago
