@@ -6,9 +6,14 @@ class HomePagesController < ApplicationController
 			order('post_at DESC').limit(3)
 
 		@advertisements = Advertisement.active
+
+		(@user = current_user) if signed_in?
+			
 	end # index
 
 	def cider
+		(@user = current_user) if signed_in?
+		
 		all_ciders = Cider.all
 		@year_round_ciders = all_ciders.where season: 'Year Round'
 		@summer_ciders = all_ciders.where season: 'Summer'
@@ -19,18 +24,23 @@ class HomePagesController < ApplicationController
 	end # cider
 
 	def about_us
+		(@user = current_user) if signed_in?
+		
 		@people = Person.all
-	
 	end # about_us
 
 	def contact_us
+		(@user = current_user) if signed_in?
 	end # contact_us
 
 	def resources
+		(@user = current_user) if signed_in?
 	end # resources
 
 	def admin
-		unless signed_in? && is_admin
+		@user = current_user
+
+		unless signed_in? && @user.admin?
 			redirect_to root_path
 		end
 	end # admin
