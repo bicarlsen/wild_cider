@@ -14,6 +14,11 @@ class CidersController < ApplicationController
 	def new
 		@user = current_user
 		@cider = Cider.new
+
+		# get local images
+		base_path = Rails.root + 'app/assets/images/ciders/'
+		@images = Dir.glob([base_path + '*.jpg', base_path + '*.png'])
+		@images.map! { |img| File.basename img }
 	end
 
 	def create
