@@ -1,7 +1,7 @@
 class Cider < ActiveRecord::Base
 	# Callbacks
 	before_validation :resolve_season
-	before_save :resolve_image
+	#before_save :resolve_image
 
 	# Validations
 	validates :name, presence: true

@@ -14,11 +14,7 @@ class CidersController < ApplicationController
 	def new
 		@user = current_user
 		@cider = Cider.new
-
-		# get local images
-		base_path = Rails.root + 'app/assets/images/ciders/'
-		@images = Dir.glob([base_path + '*.jpg', base_path + '*.png'])
-		@images.map! { |img| File.basename img }
+		@images = get_cider_labels
 	end
 
 	def create
@@ -37,10 +33,11 @@ class CidersController < ApplicationController
 	def edit 
 		@user = current_user
 		@cider = Cider.find params[:id]
+		@images = get_cider_labels
 	end
 
 	def update
-		#@cider = Cider.find params[:id]
+		@cider = Cider.find params[:id]
 		
 		if @cider.update_attributes cider_params
 			flash[:success] = 'Cider updated!'
@@ -67,6 +64,15 @@ class CidersController < ApplicationController
 
 		def must_be_admin
 			current_user.admin?
+		end
+
+		def get_cider_labels
+			# get local images
+			base_path = Rails.root + 'app/assets/images/ciders/'
+			img_paths = Dir.glob([base_path + '*.jpg', base_path + '*.png'])
+			img_paths.map! { |path| 
+				[File.basename(path), 'ciders/' + File.basename(path)] 
+			}
 		end
 
 end
