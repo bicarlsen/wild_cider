@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+					
 <div class='top-container'>
 	<div id='feature-image-container' class='slide-show'>
 		<%= image_tag 'features/mountain_view.jpg', 
@@ -15,25 +24,17 @@
 	</div>
 	<div class='updates-module'>
 		<h1>Happenings</h1>
-		<div class='update-image'>
-			<% if @updates.first %>
-				<%= image_tag @updates.first.image_file, alt: @updates.first.title %>
-			<% else %>
-				<h3 class='alert'>
-					No Recent Updates
-				</h3>
-			<% end %>
-		</div>
-		<div class='updates-container'>
-			<ul class='updates-list'>
-				<%= render partial: 'update_summary', collection: @updates %>
-			</ul>
+		<div class="fb-like-box updates-container" 
+			data-href="https://www.facebook.com/wildciderco" 
+			data-colorscheme="light" data-show-faces="false" 
+			data-header="false" data-stream="true" data-show-border="true"
+			data-width="1000" data-height="500">
 		</div>
 	</div>
 
 	<div class='right-container'>
 		<div class='ad-module'>
-			<%= render @advertisements %>
+			<%#= render @advertisements %>
 		</div>
 	</div>
 </div>
