@@ -1,10 +1,11 @@
 #--- Main ---
 $(document).ready ->
 	set_footer_position()
+	display_quick_contact()
 
 $(window).resize ->
 	set_footer_position()
-
+	display_quick_contact()
 
 #--- Functions ---
 
@@ -22,4 +23,15 @@ set_footer_position = () ->
 		footer.css('position', 'absolute')
 		footer.css('bottom', '0')
 
+# Displays or Hides Quick Contact Bar in Header
+display_quick_contact = () ->
+	cont = $( '#quick-contact' )
+	ref_link = $( 'nav a' ).last()
+	ref_link_right = ref_link.position().left + ref_link.width() +
+		( ref_link.outerWidth() - ref_link.width() ) / 2 + 5
+	
+	if ( cont.position().left <= ref_link_right )
+		cont.css( 'visibility', 'hidden' )
+	else
+		cont.css( 'visibility', 'visible' )
 

@@ -9,9 +9,14 @@
 
 
 //--- General template styles --- 
+
 .top-container, .bottom-container {
 	clear: both;
 	margin: 0px 0px 5px 0px;
+}
+
+.top-container {
+	text-align: center;
 }
 
 .left-container {
@@ -58,6 +63,7 @@ h1 {
 	display: inline-block;
 	width: 60%;
 	max-width: 800px; 
+	min-width: 500px;
 	margin-right: 20px;
 
 	//background-color: $tertiary-color;
@@ -111,7 +117,16 @@ h1 {
 			} // .update-summary
 		} // .updates-list
 	} // .updates-container
+
+	#google-cal-happenings {
+		min-width: 400px;
+		width: 100%;
+	} // #google-cal-happenings
 } // .updates-module
+
+.right-sidebar {
+	display: inline-block;
+}
 
 .ad-module {
 	$ad-width: 15em;

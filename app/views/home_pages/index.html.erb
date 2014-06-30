@@ -11,7 +11,7 @@
 	<div id='feature-image-container' class='slide-show'>
 		<%= image_tag 'features/mountain_view.jpg', 
 			class: 'feature-image active slide-show-image',
-			data: { order: 1 } %>
+			data: { order: 1 }, style: 'right: 0;' %>
 		<%= image_tag 'features/blossom_tree.jpg', 
 			class: 'feature-image slide-show-image', 
 			data: { order: 2 } %>
@@ -25,13 +25,13 @@
 	<div class='updates-module'>
 		<h1>Happenings</h1>
 		<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=wildciderco.com_tfr0e8404pfm65b31oopnc6sk4%40group.calendar.google.com&ctz=America/Denver" 
-			style="margin-left: 1em; border-width:0 " width="700" height="600" 
-			frameborder="0" scrolling="no">
+			style="margin-left: 1em; border-width:0; height: 600px;"
+			frameborder="0" scrolling="no" id='google-cal-happenings'>
 			An Error Ocurred
 		</iframe>
 	</div>
 
-	<div class='right-container'>
+	<div class='right-sidebar'>
 		<div class="fb-like-box updates-container" 
 			data-href="https://www.facebook.com/wildciderco" 
 			data-colorscheme="light" data-show-faces="false" 

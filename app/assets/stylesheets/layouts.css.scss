@@ -5,13 +5,21 @@
 
 //--- Variables ---
 $border-width: 12.5%;
+$content-padding: 0.5%;
 
+//--- Center Content ---
+.top-level-content {
+	width: 100% - ( 2* $border-width );
+	min-width: 330px;
+	margin: 0; // $border-width
+	margin-left: auto;
+	margin-right: auto;
+}
 
 //--- Body ---
 body {
-	min-width: 1100px;
+	// min-width: 1100px;
 	@include radial-gradient-background($more-pale-yellow, white);
-	
 	font-family: $font-stack;
 } // body
 
@@ -22,7 +30,8 @@ header {
 
 	position: relative;
 	min-height: 12em;
-	min-width: 860px;
+	//min-width: 855px !important;
+
 	margin: 0 $border-width;
 	padding: 0 0 0.5em;
 	border-bottom: $primary-color solid 3px;
@@ -44,6 +53,8 @@ header {
 		text-align: center;
 
 		a {	
+			display: inline-block;
+			width: 120px;
 			padding: 0.3em 2em;
 
 			color: $primary-color;
@@ -110,10 +121,10 @@ header {
 
 //--- Borders ---
 .site-border {
-	position: absolute;
+	position: fixed;
 	top: 0;
 
-	width: $border-width;
+	width: $border-width - $content-padding;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -123,7 +134,7 @@ header {
 
 	&#site-border-left {
 		left: 0;
-		background-image: asset-url('shared/cider_left_border.jpg');
+		background-image: asset-url('shared/cider_left_border.jpg');	
 	}
 
 	&#site-border-right {
@@ -134,18 +145,15 @@ header {
 
 //--- Main Content ---
 .main-content {
-	$content-padding: 2.5%;
-
-	margin: 0 ($border-width - $content-padding);
+	margin: 0 ( $border-width - $content-padding );
 	padding: 0 $content-padding;
 } // .main-content
 
 // footer
 footer {
 	clear: both;
-
 	background-color: $secondary-color;
-	width: 75%;
+
 	height: 3em;
 	padding: 1em 0 0; 
 	margin: 10em $border-width 0;
