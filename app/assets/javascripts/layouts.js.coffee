@@ -15,13 +15,18 @@ set_footer_position = () ->
 	footer_top = footer.position().top
 	footer_bottom = footer_top + footer.height()
 	
-	window_height = $(window).height()
-	body_height = $('body').height()
+	window_height = $( window ).height()
+	body_height = $( 'body' ).height()
 
 	if footer_bottom < window_height and window_height > body_height
-		$('body').height(window_height)
-		footer.css('position', 'absolute')
-		footer.css('bottom', '0')
+		main_cont = $( '.main-content' )
+		left = ( main_cont.outerWidth(true) - main_cont.width() ) / 2
+
+		$( 'body' ).height( window_height )
+
+		footer.css( 'position', 'absolute' )
+		footer.css( 'bottom', '0' )
+		footer.css( 'left', left )
 
 # Displays or Hides Quick Contact Bar in Header
 display_quick_contact = () ->
